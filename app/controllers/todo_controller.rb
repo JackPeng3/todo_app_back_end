@@ -8,7 +8,9 @@ class TodoController < ApplicationController
     def recent
     end
     def show
-    
+        @todo = Todo.find_by_id(params[:id])
+        @todo_description = Todo.find_by_id(params[:id]).description
+=begin
         todo_id = params[:id]
         if todo_id == '1'
             @todo_description = "Do homework"
@@ -32,7 +34,6 @@ class TodoController < ApplicationController
             @todo_description = "Feed dog"
         else
             @todo_description = "Task 0"
-        end
-        
+=end
     end
 end
