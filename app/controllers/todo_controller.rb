@@ -5,6 +5,8 @@ class TodoController < ApplicationController
     end
     def filter
     end
+    def recent
+    end
     def show
     
         todo_id = params[:id]
